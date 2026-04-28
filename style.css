@@ -487,21 +487,36 @@ body {
 
 @media (max-width: 900px) {
   html, body {
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    height: 100%;
+    overflow: hidden;
   }
 
-  body {
-    display: block;
+  .controls {
+    top: 15px;
+    left: 15px;
+    gap: 10px;
+  }
+
+  .controls button {
+    padding: 8px 12px;
+    font-size: 0.85em;
+  }
+
+  .widget {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 15px;
+  }
+
+  .widget-time {
+    font-size: 1.2em;
   }
 
   .main-content {
     flex-direction: column;
-    height: auto;
-    padding: 120px 0 100px 0;
-    justify-content: flex-start;
+    height: 100%;
+    padding: 60px 0;
+    justify-content: center;
   }
 
   .vertical-line {
@@ -510,14 +525,14 @@ body {
 
   .hero-section {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     flex: 0 0 auto;
   }
 
   .page-title {
-    font-size: 3.5em;
+    font-size: 2.2em;
     transform: none;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
     white-space: normal;
     text-align: center;
     justify-content: center;
@@ -528,11 +543,16 @@ body {
     width: 100%;
     padding: 0 20px;
     flex: 0 0 auto;
+    gap: 12px;
+  }
+
+  .container a {
+    max-width: 240px;
   }
 
   .container img,
   .link-content {
-    border-radius: 20px;
+    border-radius: 15px;
   }
 
   .container a::before,
