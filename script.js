@@ -100,9 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (btnId === 'qr-btn') {
                     const qrContainer = document.getElementById('qr-code-img');
-                    const siteUrl = window.location.href;
+                    let siteUrl = window.location.href;
+                    
+                    // Eğer proje lokalde çalışıyorsa (file://, localhost vs.) 
+                    // telefondan okutulduğunda çalışması için canlı GitHub Pages linkini kullan.
+                    if (siteUrl.startsWith('file://') || siteUrl.includes('localhost') || siteUrl.includes('127.0.0.1')) {
+                        siteUrl = 'https://kaaner4x.github.io/me/';
+                    }
+
                     if (qrContainer) {
-                        qrContainer.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(siteUrl)}" alt="QR Code">`;
+                        qrContainer.innerHTML = `<img src="https://quickchart.io/qr?text=${encodeURIComponent(siteUrl)}&size=200" alt="QR Code">`;
                     }
                 }
 
