@@ -1,4 +1,4 @@
-const CACHE_NAME = 'digital-card-v1';
+const CACHE_NAME = 'digital-card-v2';
 const ASSETS_TO_CACHE = [
     'index.html',
     'style.css',
