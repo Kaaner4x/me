@@ -305,6 +305,7 @@ body {
   white-space: nowrap;
   user-select: none;
   pointer-events: none;
+  margin-top: -80px;
 }
 
 .page-title span {
@@ -537,6 +538,7 @@ body {
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: -40px;
   }
 
   .container {
